@@ -14,18 +14,59 @@ let computerPlay = () => {
 }
 
 let playRound = (humanChoice,computerChoice) => {
-humanChoice = toLowerCase(humanChoice);
+    humanChoice = humanChoice.toLowerCase()
 if (humanChoice === computerChoice) {
     return "The game is a tie!";
 }
-if 
+if (humanChoice === "rock") {
+    if (computerChoice === "paper") {
+        return "The computer won this round with paper!";}
+
+        else if (computerChoice === "scissors") {
+            return "You won, the computer had scissors!"
+        }
+        else {
+
+        }
+    
+
+
+}
+if (humanChoice === "paper") {
+    if (computerChoice === "scissors") {
+        return "The computer won this round with scissors!";}
+
+        else if (computerChoice === "rock") {
+            return "You won, the computer had paper!"
+        }
+        else {
+
+        }
+    
+
+
+}
+if (humanChoice === "scissors") {
+    if (computerChoice === "rock") {
+        return "The computer won this round with rock!";}
+
+        else if (computerChoice === "paper") {
+            return "You won, the computer had paper!"
+        }
+       else {
+       }
+    
 
 
 }
 
+}
 
 
+let humanChoice = "ROCK"
 
-let humanChoice = "scissors"
 let computerChoice = computerPlay()
-
+humanChoice = humanChoice.toLowerCase();
+console.log(humanChoice);
+console.log(computerChoice);
+console.log(playRound(humanChoice,computerChoice));
