@@ -1,5 +1,5 @@
 let computerPlay = () => {
-    let randomNum = Math.floor(Math.random()*4)
+    let randomNum = Math.floor(Math.random()*3)
     if (randomNum === 0) {
         return "rock";
     }
@@ -13,4 +13,19 @@ let computerPlay = () => {
     
 }
 
-console.log(computerPlay())
+let playRound = (humanChoice,computerChoice) => {
+humanChoice = toLowerCase(humanChoice);
+if (humanChoice === computerChoice) {
+    return "The game is a tie!";
+}
+if 
+
+
+}
+
+
+
+
+let humanChoice = "scissors"
+let computerChoice = computerPlay()
+
