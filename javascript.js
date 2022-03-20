@@ -1,3 +1,5 @@
+
+
 let computerPlay = () => {
     let randomNum = Math.floor(Math.random()*3)
     if (randomNum === 0) {
@@ -16,14 +18,14 @@ let computerPlay = () => {
 let playRound = (humanChoice,computerChoice) => {
     humanChoice = humanChoice.toLowerCase()
 if (humanChoice === computerChoice) {
-    return "The game is a tie!";
-}
-if (humanChoice === "rock") {
-    if (computerChoice === "paper") {
-        return "The computer won this round with paper!";}
+    return "The game is a tie!";}
 
-        else if (computerChoice === "scissors") {
-            return "You won, the computer had scissors!"
+    else if (humanChoice === "rock") {
+        if (computerChoice === "paper") {
+            return "computer";}
+
+            else if (computerChoice === "scissors") {
+                return "human"
         }
         else {
 
@@ -31,13 +33,13 @@ if (humanChoice === "rock") {
     
 
 
-}
-if (humanChoice === "paper") {
+    }
+    else if (humanChoice === "paper") {
     if (computerChoice === "scissors") {
-        return "The computer won this round with scissors!";}
+        return "computer";}
 
         else if (computerChoice === "rock") {
-            return "You won, the computer had paper!"
+            return "human"
         }
         else {
 
@@ -45,28 +47,57 @@ if (humanChoice === "paper") {
     
 
 
-}
-if (humanChoice === "scissors") {
+    }
+    else if (humanChoice === "scissors") {
     if (computerChoice === "rock") {
-        return "The computer won this round with rock!";}
+        return "computer";}
 
         else if (computerChoice === "paper") {
-            return "You won, the computer had paper!"
+            return "human"
         }
        else {
        }
     
 
 
-}
+}}
+
+
+
+let game = () => {
+    let computerScore = 0
+    let humanScore = 0
+    for (let i = 0; i<5; i++){
+        let humanChoice = prompt("What would you like to play? Rock, paper, or scissors?")
+        let computerChoice = computerPlay()
+        let result = playRound(humanChoice,computerChoice)
+        
+        if (result === "computer"){
+            computerScore = computerScore + 1;
+            console.log('The Computer Won');
+        }
+        
+            else if (result === "human"){
+            humanScore = humanScore + 1;
+            console.log('You Won!')
+        }
+
+                else {
+                console.log('It was a tie!')}
+
+
+    
+    console.log("Human Choice: ",humanChoice);
+    console.log("Computer Choice: ",computerChoice);}
+
+
+
+
+    
+console.log("You scored:",humanScore,"The computer scored: ",computerScore)
 
 }
 
 
-let humanChoice = "ROCK"
+game();
 
-let computerChoice = computerPlay()
-humanChoice = humanChoice.toLowerCase();
-console.log(humanChoice);
-console.log(computerChoice);
-console.log(playRound(humanChoice,computerChoice));
