@@ -1,0 +1,18 @@
+.overall{
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    text-align: center;
+    
+}
+.scores {
+    text-align: center;
+    font-size: large;
+}
+.outputs {
+    text-align: center;
+}
+.buttons {
+    font-size: 30px;
+    
+}
